@@ -1,0 +1,24 @@
+<!-- popup/popup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FortiKey</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="lockedView">
+    <h2>Unlock Vault</h2>
+    <input type="password" id="masterPassword" placeholder="Master Password" />
+    <button id="unlockBtn">Unlock</button>
+    <p id="unlockError" class="error"></p>
+  </div>
+
+  <div id="unlockedView" class="hidden">
+    <h2>Vault Unlocked</h2>
+    <button id="lockBtn">Lock</button>
+  </div>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
