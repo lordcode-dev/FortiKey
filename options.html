@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FortiKey Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <header class="header"><h1 data-i18n="optionsTitle">Settings</h1></header>
+
+    <section class="card">
+      <h2 data-i18n="themeLabel">Theme</h2>
+      <select id="theme-select"><option value="light" data-i18n="lightTheme">Light</option><option value="dark" data-i18n="darkTheme">Dark</option></select>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="languageLabel">Language</h2>
+      <select id="language-select"><option value="en">English</option><option value="es">Español</option></select>
+    </section>
+
+    <section class="card">
+      <label class="toggle"><input type="checkbox" id="sync-toggle" /><span data-i18n="syncLabel">Cloud Sync</span></label>
+      <label class="toggle"><input type="checkbox" id="autofill-toggle" /><span data-i18n="autofillEnabledLabel">Auto-fill enabled</span></label>
+      <label class="toggle"><input type="checkbox" id="autologin-toggle" /><span data-i18n="autologinEnabledLabel">Auto-login after fill</span></label>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="biometricLabel">Biometric Unlock</h2>
+      <div class="row"><button id="register-biometric" data-i18n="registerBiometric">Register</button><button id="remove-biometric" class="ghost" data-i18n="removeBiometric">Remove</button></div>
+      <p class="helper" id="biometric-status"></p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="exportVault">Export Vault</h2>
+      <button id="export-button" data-i18n="downloadEncryptedBackup">Download Encrypted Backup</button>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="importVault">Import Vault</h2>
+      <textarea id="import-text" rows="6" data-i18n-placeholder="importPlaceholder" placeholder="Paste encrypted vault JSON"></textarea>
+      <button id="import-button" data-i18n="importButton">Import</button>
+      <p class="helper" id="import-status"></p>
+    </section>
+
+    <script src="crypto.js"></script>
+    <script src="vault.js"></script>
+    <script src="i18n.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
