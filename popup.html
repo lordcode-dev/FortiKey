@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FortiKey</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 data-i18n="popupTitle">Vault</h1>
+      <a class="settings-link" href="options.html" target="_blank" rel="noreferrer">⚙️</a>
+    </header>
+
+    <section id="setup" class="card hidden">
+      <h2 data-i18n="setupTitle">Set Master Password</h2>
+      <form id="setup-form">
+        <label><span data-i18n="masterPasswordLabel">Master Password</span><input type="password" id="setup-password" required /></label>
+        <label><span data-i18n="confirmPasswordLabel">Confirm Password</span><input type="password" id="setup-confirm" required /></label>
+        <button type="submit" data-i18n="createVault">Create Vault</button>
+        <p class="helper" id="setup-error"></p>
+      </form>
+    </section>
+
+    <section id="unlock" class="card hidden">
+      <h2 data-i18n="unlockTitle">Unlock Vault</h2>
+      <form id="unlock-form">
+        <label><span data-i18n="masterPasswordLabel">Master Password</span><input type="password" id="unlock-password" required /></label>
+        <div class="unlock-actions">
+          <button type="submit" data-i18n="unlockButton">Unlock</button>
+          <button type="button" id="biometric-button" class="ghost" data-i18n="useBiometric">Use biometric</button>
+        </div>
+        <p class="helper" id="unlock-error"></p>
+      </form>
+    </section>
+
+    <section id="vault" class="hidden">
+      <div class="card">
+        <h2 id="entry-title" data-i18n="addEntry">Add Entry</h2>
+        <form id="entry-form">
+          <input type="hidden" id="entry-id" />
+          <label><span data-i18n="nameLabel">Name</span><input type="text" id="entry-name" required /></label>
+          <label><span data-i18n="usernameLabel">Username</span><input type="text" id="entry-username" required /></label>
+          <label><span data-i18n="passwordLabel">Password</span><input type="text" id="entry-password" required /></label>
+          <label><span data-i18n="urlOptionalLabel">URL (optional)</span><input type="url" id="entry-url" data-i18n-placeholder="urlOptionalLabel" placeholder="URL (optional)" /></label>
+          <div class="row">
+            <button type="submit" data-i18n="save">Save</button>
+            <button type="button" id="cancel-edit" class="ghost hidden" data-i18n="cancel">Cancel</button>
+            <button type="button" id="generate-button" data-i18n="generatePassword">Generate</button>
+          </div>
+        </form>
+        <div id="generator" class="generator">
+          <label><span data-i18n="lengthLabel">Length</span><input type="range" id="gen-length" min="8" max="32" value="16" /><span id="gen-length-value">16</span></label>
+          <label><input type="checkbox" id="gen-upper" checked /> <span data-i18n="uppercaseLabel">Uppercase</span></label>
+          <label><input type="checkbox" id="gen-lower" checked /> <span data-i18n="lowercaseLabel">Lowercase</span></label>
+          <label><input type="checkbox" id="gen-numbers" checked /> <span data-i18n="numbersLabel">Numbers</span></label>
+          <label><input type="checkbox" id="gen-symbols" /> <span data-i18n="symbolsLabel">Symbols</span></label>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="popupTitle">Vault</h2>
+        <div id="vault-list" class="vault-list"></div>
+      </div>
+    </section>
+
+    <script src="crypto.js"></script>
+    <script src="vault.js"></script>
+    <script src="i18n.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
