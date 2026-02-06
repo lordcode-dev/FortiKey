@@ -1,0 +1,7 @@
+Add your prepared Chrome extension icons here before packaging:
+- icon-16.png
+- icon-32.png
+- icon-48.png
+- icon-128.png
+
+These filenames are referenced by manifest.json.

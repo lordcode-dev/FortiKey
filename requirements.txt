@@ -1,2 +1,2 @@
 # No third-party Python dependencies are required.
-# `run.py` uses only the Python standard library.
+# Optional utility scripts are also stdlib-only.

@@ -28,3 +28,15 @@ FortiKey is a **Chrome Extension (Manifest V3)** focused on secure password mana
 ## Security Notes
 If you discover a security issue, please avoid posting sensitive exploit details publicly.
 Open an issue with a high-level report and reproduction guidance.
+
+## Custom Icons
+This repository keeps only placeholders in `icons/`.
+Before release, add your prepared PNG files:
+- `icons/icon-16.png`
+- `icons/icon-32.png`
+- `icons/icon-48.png`
+- `icons/icon-128.png`
+
+You can validate icon references with:
+`python tools/validate_manifest_assets.py`
+
