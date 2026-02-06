@@ -1,7 +1,2 @@
-Flask==3.0.3
-Flask-Login==0.6.3
-Flask-WTF==1.2.1
-email-validator==2.2.0
-bcrypt==4.2.0
-cryptography==43.0.1
-sqlalchemy==2.0.34
+# No third-party Python dependencies are required.
+# Optional utility scripts are also stdlib-only.
