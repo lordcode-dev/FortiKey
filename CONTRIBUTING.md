@@ -30,13 +30,8 @@ If you discover a security issue, please avoid posting sensitive exploit details
 Open an issue with a high-level report and reproduction guidance.
 
 ## Custom Icons
-This repository keeps only placeholders in `icons/`.
-Before release, add your prepared PNG files:
-- `icons/icon-16.png`
-- `icons/icon-32.png`
-- `icons/icon-48.png`
-- `icons/icon-128.png`
-
-You can validate icon references with:
+Binary icon files are not tracked in this repository.
+If you add icons for packaging, use PNG files and add matching `manifest.json` references in the same change.
+You can validate any manifest icon references with:
 `python tools/validate_manifest_assets.py`
 
