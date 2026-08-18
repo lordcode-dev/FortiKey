@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 16px;
+  background: #0f1320;
+  color: #f8fafc;
+}
+
+body[data-theme="light"] {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.settings-link {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+body[data-theme="light"] .card {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.15);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="url"] {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: transparent;
+  color: inherit;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  color: inherit;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.helper {
+  color: #f87171;
+  font-size: 12px;
+  min-height: 16px;
+}
+
+.unlock-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.generator {
+  border-top: 1px dashed rgba(148, 163, 184, 0.3);
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.vault-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vault-item {
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 10px;
+  padding: 8px;
+  display: grid;
+  gap: 6px;
+}
+
+.vault-item .meta {
+  font-size: 12px;
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.vault-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vault-actions button {
+  flex: 1;
+}
